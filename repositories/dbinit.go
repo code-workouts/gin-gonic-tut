@@ -9,20 +9,20 @@ import (
 )
 
 const (
-	//mysql_users_username=root;mysql_users_password=root1234;mysql_users_host=127.0.0.1:3306;mysql_users_schema=users_db
-	mysql_users_username = "mysql_users_username"
-	mysql_users_password = "mysql_users_password"
-	mysql_users_host = "mysql_users_host"
-	mysql_users_schema = "mysql_users_schema"
+	//mysqlUsersUsername=root;mysql_users_password=root1234;mysql_users_host=127.0.0.1:3306;mysql_users_schema=users_db
+	mysqlUsersUsername = "mysql_users_username"
+	mysqlUsersPassword = "mysql_users_password"
+	mysqlUsersHost     = "mysql_users_host"
+	mysqlUsersSchema   = "mysql_users_schema"
 )
 
 var (
 	DB *gorm.DB
 
-	username = os.Getenv(mysql_users_username)
-	password = os.Getenv(mysql_users_password)
-	host = os.Getenv(mysql_users_host)
-	schema = os.Getenv(mysql_users_schema)
+	username = os.Getenv(mysqlUsersUsername)
+	password = os.Getenv(mysqlUsersPassword)
+	host     = os.Getenv(mysqlUsersHost)
+	schema   = os.Getenv(mysqlUsersSchema)
 )
 
 //Init func is called when package is imported
