@@ -63,6 +63,12 @@ func DeleteTask(c *gin.Context) {
 	}
 }
 
+func OptionsTask(c *gin.Context) {
+	c.Header("allow", "get, post, put, patch, delete, options")
+	c.Header("x-token", "asdasdasd-asdasdas-sdfsdf-werwer")
+	c.JSON(http.StatusOK, "")
+}
+
 func GetTask(c *gin.Context) {
 	taskID, err := uuid.Parse(c.Param("id"))
 	if err != nil {
